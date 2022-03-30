@@ -1,0 +1,60 @@
+.footer-container {
+    background-color: #546A7B;
+    height: 200px;
+    text-align: end;
+    vertical-align: bottom;
+    position: relative;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 225px;
+}
+
+.footer-text {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer {
+    color: #ffffff;
+}
+
+.buttons-container {
+    margin: 20px 0 20px 0;
+}
+.buttons-container button {
+    margin-left: 20px;
+    border-radius: 0;
+    background-color: #f6b00f;
+    width: 150px;
+}
+.datagrid {
+    margin: 20px auto;
+    background-color: #C4C4C4;
+    height: 600px;
+    width: 90%;
+}
