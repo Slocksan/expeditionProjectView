@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { Collapse, Container} from 'reactstrap';
-import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export class Footer extends Component {
-  static displayName = Footer.name;
-
-  render () {
+    render () {
     return (
       <footer>
         <div className="footer-container">
