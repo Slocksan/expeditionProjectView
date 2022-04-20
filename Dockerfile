@@ -1,12 +1,11 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-ARG REPO=mcr.microsoft.com/dotnet
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM @REPO/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 ENV BuildingDocker true
 WORKDIR /src
 COPY ["ExpeditionProject.csproj", "."]
@@ -16,7 +15,7 @@ WORKDIR "/src/."
 RUN dotnet build "ExpeditionProject.csproj" -c Release -o /app/build
 
 FROM node:12-alpine as build-node
-WORKDIR .
+WORKDIR /app
 COPY ./package.json .
 COPY ./package-lock.json .
 RUN npm install
